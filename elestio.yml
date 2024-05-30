@@ -7,20 +7,10 @@ ports:
     public: true
     path: "/"
     isAuth: false
-  - protocol: "HTTPS"
-    targetProtocol: "HTTP"
-    listeningPort: "43097"
-    targetPort: "27918"
-    targetIP: "172.17.0.1"
-    public: true
-    path: "/"
-    isAuth: false
 environments:
   - key: "SOFTWARE_VERSION_TAG"
     value: "latest"
   - key: "ADMIN_PASSWORD"
-    value: "random_password"
-  - key: "MINIO_ROOT_PASSWORD"
     value: "random_password"
   - key: "P_FS_DIR"
     value: "/parseable/data"
@@ -32,16 +22,6 @@ environments:
     value: "admin"
   - key: "P_PASSWORD"
     value: "random_password"
-  - key: "P_S3_URL"
-    value: "https://[CI_CD_DOMAIN]:43097"
-  - key: "P_S3_BUCKET"
-    value: "parseable"
-  - key: "P_S3_ACCESS_KEY"
-    value: "minio"
-  - key: "P_S3_SECRET_KEY"
-    value: "random_password"
-  - key: "P_S3_REGION"
-    value: "us-east-1"
 
 config:
   runTime: "dockerCompose"

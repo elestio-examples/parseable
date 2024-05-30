@@ -80,8 +80,29 @@ To query the data via API, use the following command.
     --header 'Authorization: Basic <YOUR_API_KEY>' \
     --header 'Content-Type: application/json' \
     --data-raw '{
-        "query": "select * from demo"
+        "query": "select * from demo",
+        "startTime": "<START_TIME>",
+        "endTime": "<END_TIME>"
     }'
+
+START_TIME and END_TIME must be in this format:
+
+    YYYY-MM-DDTHH:mm:SS+UTC
+
+Where:
+
+- YYYY is the four-digit year, e.g., 2024
+- MM is the two-digit month, e.g., 03
+- DD is the two-digit day of the month, e.g., 25
+- T is the date-time separator
+- HH is the two-digit hour (24-hour format), e.g., 14 for 2 PM
+- mm is the two-digit minute, e.g., 30
+- SS is the two-digit second, e.g., 00
+- +UTC is the time zone offset, e.g., +00:00 for UTC
+
+For example:
+
+    2023-01-02T00:00:00+00:00
 
 ## Documentation
 
